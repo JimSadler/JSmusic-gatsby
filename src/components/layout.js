@@ -7,15 +7,24 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-
+import styled from 'styled-components'
 import "./layout.css"
+import './global.css';
 
+import DarkModeToggle from './UseDarkMode.js';
+
+
+const Main = styled.main`
+  margin: 0 auto;
+  max-width: 1000px;
+`
 const Layout = ({ children }) => {
 
 
   return (
     <>
-      <main>{children}</main>
+      <DarkModeToggle />
+      <Main>{children}</Main>
       <footer>
         © {new Date().getFullYear()}, Built with
           {` `}

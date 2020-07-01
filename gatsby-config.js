@@ -7,6 +7,17 @@ module.exports = {
   plugins: [
     'gatsby-plugin-emotion',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-dark-mode',
+    {
+      resolve: 'gatsby-plugin-use-dark-mode',
+      options: {
+        classNameDark: 'dark-mode',
+        classNameLight: 'light-mode',
+        storageKey: 'darkMode',
+        minify: true,
+      },
+    },
+
     {
       resolve: 'gatsby-source-prismic-graphql',
       options: {
