@@ -2,7 +2,11 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { RichText } from 'prismic-reactjs';
 import Layout from '../components/layout'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import { fadeIn, rollIn } from 'react-animations'
+
+const tadaFlip = keyframes(rollIn);
+const fadeInAnimation = keyframes`${fadeIn}`;
 
 const HeadImg = styled.img`
   border-radius: 50%;
@@ -12,7 +16,14 @@ const HeadImg = styled.img`
 `
 const HeadImgContainer = styled.div`
   text-align: center;
+    animation: 1s ${tadaFlip};
+
 `;
+
+const PageContent = styled.div`
+  animation: 4s ${fadeInAnimation};
+
+`
 export const query = graphql`
 query PageQuery($id: String) {
   prismic {
@@ -39,13 +50,13 @@ const Page = (props) => {
   return (
 
     <Layout>
-
       <RichText render={pageTitle} />
       <HeadImgContainer>
         <HeadImg alt={props.data.prismic.allPages.edges[0].node.header_img.alt} src={pageHeaderImg} />
       </HeadImgContainer>
-
-      <RichText render={pageContent} />
+      <PageContent>
+        <RichText render={pageContent} />
+      </PageContent>
     </Layout>
 
   )

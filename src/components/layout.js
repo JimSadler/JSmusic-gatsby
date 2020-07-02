@@ -7,17 +7,24 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { StaticQuery, Link, graphql } from 'gatsby';
 import "./layout.css"
 import './global.css';
+import { fadeIn } from 'react-animations'
+
 
 import DarkModeToggle from './UseDarkMode.js';
+const fadeInAnimation = keyframes`${fadeIn}`;
 
+const PageFade = styled.div`
+  animation: 3s ${fadeInAnimation};
 
+`
 const Main = styled.main`
   margin: 0 auto;
   max-width: 1000px;
+  padding-top: 2%;
 `
 const NavLink = styled.div`
   margin: auto 0;
@@ -72,7 +79,7 @@ const Layout = ({ children }) => {
 
 
   return (
-    <>
+    <PageFade>
 
       <Header>
         <StaticQuery
@@ -107,7 +114,7 @@ const Layout = ({ children }) => {
           {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
-    </>
+    </PageFade>
   )
 }
 

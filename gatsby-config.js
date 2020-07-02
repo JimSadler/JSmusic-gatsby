@@ -7,7 +7,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-emotion',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-dark-mode',
+    'react-animations',
     {
       resolve: 'gatsby-plugin-use-dark-mode',
       options: {
