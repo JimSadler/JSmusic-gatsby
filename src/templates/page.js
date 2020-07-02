@@ -17,11 +17,21 @@ const HeadImg = styled.img`
 const HeadImgContainer = styled.div`
   text-align: center;
     animation: 1s ${tadaFlip};
+  max-width:900px;
+  margin: 0 auto;
 
 `;
 
 const PageContent = styled.div`
   animation: 4s ${fadeInAnimation};
+    max-width:900px;
+    margin: 0 auto;
+
+
+`
+const PageTitle = styled.div`
+    margin: 0 auto;
+    max-width:900px;
 
 `
 export const query = graphql`
@@ -50,7 +60,9 @@ const Page = (props) => {
   return (
 
     <Layout>
-      <RichText render={pageTitle} />
+      <PageTitle>
+        <RichText render={pageTitle} />
+      </PageTitle>
       <HeadImgContainer>
         <HeadImg alt={props.data.prismic.allPages.edges[0].node.header_img.alt} src={pageHeaderImg} />
       </HeadImgContainer>

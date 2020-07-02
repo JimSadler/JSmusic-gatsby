@@ -1,18 +1,36 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { graphql } from "gatsby"
+import SliceZone from '../components/SliceZone'
 import Layout from "../components/layout"
 
-const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+export const query = graphql`
+{
+  prismic {
+    allHomepages {
+      edges {
+        node {
+          body {
+            ... on PRISMIC_HomepageBodyHero {
+              type
+              primary {
+                hero_content
+                hero_title
+                background_image
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
 
+const IndexPage = (props) => {
+  return (
+    <Layout>
+      <SliceZone body={props.data.prismic.allHomepages.edges[0].node.body} />
+    </Layout>
+  )
+}
 export default IndexPage

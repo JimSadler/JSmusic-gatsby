@@ -23,8 +23,7 @@ const PageFade = styled.div`
 `
 const Main = styled.main`
   margin: 0 auto;
-  max-width: 1000px;
-  padding-top: 2%;
+  
 `
 const NavLink = styled.div`
   margin: auto 0;
@@ -85,8 +84,9 @@ const Layout = ({ children }) => {
         <StaticQuery
           query={`${navigationQuery}`}
           render={(data) => {
-            console.log(data);
+
             return (
+              console.log(data),
               <>
                 <Branding>
                   {data.prismic.allNavigations.edges[0].node.branding}
