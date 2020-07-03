@@ -619,3 +619,18 @@ pre tt:after {
     font-size: 100%;
   }
 }
+.envelope:hover {
+  outline: 0;
+  color: #f4f5f7;
+  background-color: #41b783;
+}
+.soundcloud:hover {
+  outline: 0;
+  color: #f4f5f7;
+  background-color: #fb5501;
+}
+.facebook:hover {
+  outline: 0;
+  color: #f4f5f7;
+  background-color: #4267b2;
+}

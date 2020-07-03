@@ -8,6 +8,10 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-styled-components',
     'react-animations',
+    '@fortawesome/react-fontawesome',
+    '@fortawesome/free-solid-svg-icons',
+    '@fortawesome/fontawesome-svg-core',
+    '@fortawesome/free-brands-svg-icons',
     {
       resolve: 'gatsby-plugin-use-dark-mode',
       options: {
