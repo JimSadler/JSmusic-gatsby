@@ -12,6 +12,26 @@ module.exports = {
     '@fortawesome/free-solid-svg-icons',
     '@fortawesome/fontawesome-svg-core',
     '@fortawesome/free-brands-svg-icons',
+
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Limelight`,
+            variants: [`400`, `700`, `bold`, `regular`]
+          },
+          {
+            family: `Boogaloo`,
+            variants: [`400`, `700`, `bold`, `regular`]
+          },
+          {
+            family: `Sonsie One`,
+            variants: [`400`, `700`, `bold`, `regular`]
+          }
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-use-dark-mode',
       options: {

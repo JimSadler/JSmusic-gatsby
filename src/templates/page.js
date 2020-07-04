@@ -25,7 +25,7 @@ const HeadImgContainer = styled.div`
 const PageContent = styled.div`
   animation: 4s ${fadeInAnimation};
     max-width:900px;
-    margin: 0 auto;
+    margin: 0 auto 150px;
 
 
 `
@@ -33,6 +33,9 @@ const PageTitle = styled.div`
     margin: 0 auto;
     max-width:900px;
 
+`
+const PageMain = styled.div`
+  padding-top: 20px;
 `
 export const query = graphql`
 query PageQuery($id: String) {
@@ -60,15 +63,18 @@ const Page = (props) => {
   return (
 
     <Layout>
-      <PageTitle>
-        <RichText render={pageTitle} />
-      </PageTitle>
-      <HeadImgContainer>
-        <HeadImg alt={props.data.prismic.allPages.edges[0].node.header_img.alt} src={pageHeaderImg} />
-      </HeadImgContainer>
-      <PageContent>
-        <RichText render={pageContent} />
-      </PageContent>
+      <PageMain>
+        <PageTitle>
+          <RichText render={pageTitle} />
+        </PageTitle>
+        <HeadImgContainer>
+          <HeadImg alt={props.data.prismic.allPages.edges[0].node.header_img.alt} src={pageHeaderImg} />
+        </HeadImgContainer>
+        <PageContent>
+          <RichText render={pageContent} />
+          <a href="https://soundcloud.com/jim-sadler-music/tracks">https://soundcloud.com/jim-sadler-music/tracks</a>
+        </PageContent>
+      </PageMain>
     </Layout>
 
   )

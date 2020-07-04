@@ -57,7 +57,7 @@ code {
 
 a {
   text-decoration: none;
-  color: #006688;
+  color: #66feff;
 }
 
 button {
@@ -137,4 +137,41 @@ body.dark-mode .dark-mode-toggle > button {
 }
 body.dark-mode .dark-mode-toggle > button:last-child {
   color: lightblue;
+  margin-left: 3px;
+}
+
+body.light-mode .envelope a {
+  outline: 0;
+  color: #333;
+}
+body.light-mode .soundcloud a {
+  outline: 0;
+  color: #333;
+}
+body.light-mode .facebook a {
+  outline: 0;
+  color: #333;
+}
+body.light-mode .envelope:hover a {
+  outline: 0;
+  color: #f4f5f7;
+  background-color: #41b783;
+}
+body.light-mode .soundcloud:hover a {
+  outline: 0;
+  color: #f4f5f7;
+  background-color: #fb5501;
+}
+body.light-mode .facebook:hover a {
+  outline: 0;
+  color: #f4f5f7;
+  background-color: #4267b2;
+}
+body.light-mode a {
+  text-decoration: none;
+  color: #333;
+}
+body.light-mode header a {
+  text-decoration: none;
+  color: rgb(255 255 255);
 }
