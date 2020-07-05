@@ -175,3 +175,23 @@ body.light-mode header a {
   text-decoration: none;
   color: rgb(255 255 255);
 }
+
+body.light-mode form {
+  background: #eee;
+}
+body.dark-mode form {
+  background: #292a2b;
+}
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background: hsl(0, 0%, 10%);
+  color: #afafaf;
+  line-height: 1.5;
+  font-size: 100%;
+  border: 1px solid hsl(0, 0%, 10%);
+}
+
+body.dark-mode form input:focus,
+body.dark-mode form textarea:focus {
+  background: hsl(0, 7%, 20%);
+}

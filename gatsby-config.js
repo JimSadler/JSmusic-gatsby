@@ -12,6 +12,7 @@ module.exports = {
     '@fortawesome/free-solid-svg-icons',
     '@fortawesome/fontawesome-svg-core',
     '@fortawesome/free-brands-svg-icons',
+    'react-iframe',
 
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,

@@ -22,7 +22,7 @@ const FootLinks = styled.ul`
   float: right;
   li {
     display: inline-block;
-    padding: 0.5rem .7rem;
+    padding: 0.4rem .7rem;
     margin: 0 .5rem;
     height: 50px;
     width: 50px;

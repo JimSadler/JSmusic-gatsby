@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { RichText } from 'prismic-reactjs';
+import RichText from '../components/RichText';
 import Layout from '../components/layout'
 import styled, { keyframes } from 'styled-components'
 import { fadeIn, rollIn } from 'react-animations'
@@ -72,7 +72,6 @@ const Page = (props) => {
         </HeadImgContainer>
         <PageContent>
           <RichText render={pageContent} />
-          <a href="https://soundcloud.com/jim-sadler-music/tracks">https://soundcloud.com/jim-sadler-music/tracks</a>
         </PageContent>
       </PageMain>
     </Layout>
