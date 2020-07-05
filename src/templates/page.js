@@ -57,6 +57,8 @@ query PageQuery($id: String) {
 `
 
 const Page = (props) => {
+  const prismicContent = props.data.prismic.allPages.edges[0]
+  if (!prismicContent) return null
   const pageTitle = props.data.prismic.allPages.edges[0].node.page_title;
   const pageContent = props.data.prismic.allPages.edges[0].node.content;
   const pageHeaderImg = props.data.prismic.allPages.edges[0].node.header_img.url;
