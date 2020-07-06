@@ -98,7 +98,7 @@ const LayoutHeader = ({ siteTitle }) => (
           <Link to="/testimonials">Testimonials</Link>
         </li>
         <li>
-          <Link to="/contact-us">Contact Us</Link>
+          <Link to="/contact-us">Contact</Link>
         </li>
         <li>
           <DarkModeToggle />

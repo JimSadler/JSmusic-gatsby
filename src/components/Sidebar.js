@@ -13,7 +13,7 @@ export default props => {
       <Link className="menu-item" to="/sounds">Sounds</Link>
       <Link className="menu-item" to="/lessons">Lessons</Link>
       <Link className="menu-item" to="/testimonials">Testimonials</Link>
-      <Link className="menu-item" to="/contact-us">Contact Us</Link>
+      <Link className="menu-item" to="/contact-us">Contact</Link>
       <DarkModeToggle className="menu-item" />
     </Menu>
   );
