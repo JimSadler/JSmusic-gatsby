@@ -12,14 +12,14 @@ const Gear = <FontAwesomeIcon icon={faCog} size="1x" spin />
 const FooterContainer = styled.footer`
   border-top: 1px solid;
   text-align: center;
-  padding: 1.5rem 7rem .5rem;
 `
 const FootTitle = styled.div`
-  float: left;
+padding-top 1rem;
 `
 const FootLinks = styled.ul`
   list-style: none;
-  float: right;
+  margin-left: 0px!important;
+  margin-bottom: 0rem;
   li {
     display: inline-block;
     padding: 0.4rem .7rem;
@@ -33,8 +33,8 @@ const FootLinks = styled.ul`
   }
 `
 const DevLink = styled.div`
-  padding-top: 1rem;
-  margin-top: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
   a {
     font-size: 14px;
   }
@@ -54,32 +54,50 @@ const SocialLink = styled.a`
 const Footer = () => {
   return (
     <FooterContainer >
-      <FootTitle>
-        <h2>Jim Sadler Music</h2>
-      </FootTitle>
-      <FootLinks>
-        <li className="facebook">
-          <SocialLink rel="noreferrer" href="https://www.facebook.com/Jimsadlermusic/" target="_blank" aria-label="Facebook">
-            <i>{Facebook}</i>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-12 col-lg-6">
+            <FootTitle className="foot-title">
+              <h2>Jim Sadler Music</h2>
+            </FootTitle>
+          </div>
+          <div className="col-sm-12 col-lg-6">
+            <FootLinks>
+              <li className="facebook">
+                <SocialLink rel="noreferrer" href="https://www.facebook.com/Jimsadlermusic/" target="_blank" aria-label="Facebook">
+                  <i>{Facebook}</i>
 
-          </SocialLink>
-        </li>
-        <li className="soundcloud">
-          <SocialLink rel="noreferrer" href="https://soundcloud.com/jim-sadler-music/sets" target="_blank" aria-label="Soundcloud">
-            <i>{SoundCloud}</i>
-          </SocialLink>
-        </li>
-        <li className="envelope">
-          <SocialLink className="envelope" rel="noreferrer" href="mailto:jim@jimsadlermusic.com" target="_blank" aria-label="Email">
-            <i>{Envelope}</i>
-          </SocialLink>
-        </li>
-      </FootLinks>
+                </SocialLink>
+              </li>
+              <li className="soundcloud">
+                <SocialLink rel="noreferrer" href="https://soundcloud.com/jim-sadler-music/sets" target="_blank" aria-label="Soundcloud">
+                  <i>{SoundCloud}</i>
+                </SocialLink>
+              </li>
+              <li className="envelope">
+                <SocialLink className="envelope" rel="noreferrer" href="mailto:jim@jimsadlermusic.com" target="_blank" aria-label="Email">
+                  <i>{Envelope}</i>
+                </SocialLink>
+              </li>
+            </FootLinks>
+          </div>
+        </div>
+      </div>
+
       <DevLink>
-        © {new Date().getFullYear()}, Jim Sadler Music
-          {` `}
-        <div><a rel="noreferrer" target="_blank" href="https://jsdevelopment.tech">
-          {Gear} Website developed by J.S Development</a></div>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="copyrite">
+                © {new Date().getFullYear()}, Jim Sadler Music{` `}
+              </div>
+              <div className="jsd-link">
+                <a rel="noreferrer" target="_blank" href="https://jsdevelopment.tech">
+                  {Gear} Website developed by J.S Development</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </DevLink>
 
     </FooterContainer >

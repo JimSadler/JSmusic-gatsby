@@ -68,13 +68,25 @@ const MusicPage = (props) => {
     <Layout>
       <PageMain>
         <PageTitle>
-          <RichText render={pageTitle} />
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <RichText render={pageTitle} />
+              </div>
+            </div>
+          </div>
         </PageTitle>
         <HeadImgContainer>
           <HeadImg render={props.data.prismic.allMusic_pages.edges[0].node.music_head_img.alt} src={musicHeaderImg} />
         </HeadImgContainer>
         <PageContent>
-          <RichText render={pageContent} />
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <RichText render={pageContent} />
+              </div>
+            </div>
+          </div>
         </PageContent>
       </PageMain>
       <IframeContainer>

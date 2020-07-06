@@ -67,13 +67,26 @@ const Page = (props) => {
     <Layout>
       <PageMain>
         <PageTitle>
-          <RichText render={pageTitle} />
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <RichText render={pageTitle} />
+              </div>
+            </div>
+          </div>
         </PageTitle>
         <HeadImgContainer>
           <HeadImg alt={props.data.prismic.allPages.edges[0].node.header_img.alt} src={pageHeaderImg} />
         </HeadImgContainer>
         <PageContent>
-          <RichText render={pageContent} />
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <RichText render={pageContent} />
+              </div>
+            </div>
+          </div>
+
         </PageContent>
       </PageMain>
     </Layout>

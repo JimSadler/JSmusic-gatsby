@@ -29,7 +29,7 @@ const Hero = ({ title, content, backgroundImage }) => {
   console.log(title, content);
   return (
     <HeroWrapper backgroundImage={backgroundImage}>
-      <div>
+      <div className="hero-content">
         <RichText render={title} />
         <p>
           {content}

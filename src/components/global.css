@@ -266,9 +266,15 @@ body {
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
+.light-mode .bm-menu {
+  background: #f1f1f3;
+}
 body.light-mode nav a {
   text-decoration: none;
-  color: rgb(223 223 223);
+  color: #1d1d20;
+}
+body.light-mode nav input[type="checkbox"].dmcheck + label {
+  background-color: #333;
 }
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
@@ -291,20 +297,48 @@ header ul {
   display: none;
 }
 header div[class^="LayoutHeader__Logo"] {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   font-size: 30px;
 }
 header div[class^="LayoutHeader__Logo"] a {
   font-size: 30px;
+  margin-left: 2rem;
 }
 div#sideNav {
   margin-top: -30px;
+}
+.hero-content {
+  display: none;
+}
+.bm-burger-bars {
+  height: 12% !important;
+}
+footer ul {
+  float: none;
+}
+.foot-title {
+  float: none;
+}
+.copyrite {
+  font-size: 15px;
 }
 @media (min-width: 1064px) {
   .bm-burger-button {
     display: none;
   }
+  footer {
+    padding: 1.5rem 7rem 0.5rem;
+  }
+  footer ul {
+    float: right;
+  }
+  .foot-title {
+    float: left;
+  }
   header ul {
+    display: block;
+  }
+  .hero-content {
     display: block;
   }
   div#sideNav {

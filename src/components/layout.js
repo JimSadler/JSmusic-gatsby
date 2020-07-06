@@ -13,7 +13,6 @@ import './global.css';
 import { fadeIn } from 'react-animations'
 import Footer from './Footer'
 import Header from './LayoutHeader'
-import SideBar from "./Sidebar";
 
 
 // animations
