@@ -3,6 +3,7 @@ import React from "react"
 import styled, { keyframes } from 'styled-components'
 import { Link } from 'gatsby';
 import './global.css';
+import SideBar from "./Sidebar";
 import { fadeInUp, slideInLeft } from 'react-animations'
 import DarkModeToggle from './UseDarkMode.js';
 
@@ -72,34 +73,38 @@ animation: 1.5s ${fadeUp};
 //   margin: auto 0;
 // `
 const LayoutHeader = ({ siteTitle }) => (
-  <Header>
+  <>
+    <div id="sideNav">
+      <SideBar pageWrapId={"page_wrapper"} outerContainerId={"sideNav"} />
+    </div>
+    <Header>
 
-    {/* <LogoImg src="../src/images/Js_guitar_logoFinal_alt.png" alt="" /> */}
-    <Logo>
+      {/* <LogoImg src="../src/images/Js_guitar_logoFinal_alt.png" alt="" /> */}
+      <Logo>
 
-      <a className="HeaderLogoText" href="/">Jim Sadler Music</a>
-    </Logo >
-    <NavUl className="navigation">
-      <li>
-        <Link to="/jimbio">Bio</Link>
-      </li>
-      <li>
-        <Link to="/sounds">Sounds</Link>
-      </li>
-      <li>
-        <Link to="/lessons">Lessons</Link>
-      </li>
-      <li>
-        <Link to="/testimonials">Testimonials</Link>
-      </li>
-      <li>
-        <Link to="/contact-us">Contact Us</Link>
-      </li>
-      <li>
-        <DarkModeToggle />
-      </li>
-    </NavUl>
-    {/* <StaticQuery
+        <a className="HeaderLogoText" href="/">Jim Sadler Music</a>
+      </Logo >
+      <NavUl className="navigation">
+        <li>
+          <Link to="/jimbio">Bio</Link>
+        </li>
+        <li>
+          <Link to="/sounds">Sounds</Link>
+        </li>
+        <li>
+          <Link to="/lessons">Lessons</Link>
+        </li>
+        <li>
+          <Link to="/testimonials">Testimonials</Link>
+        </li>
+        <li>
+          <Link to="/contact-us">Contact Us</Link>
+        </li>
+        <li>
+          <DarkModeToggle />
+        </li>
+      </NavUl>
+      {/* <StaticQuery
           query={`${navigationQuery}`}
           render={(data) => {
 
@@ -124,7 +129,8 @@ const LayoutHeader = ({ siteTitle }) => (
             )
           }}
         /> */}
-  </Header>
+    </Header>
+  </>
 )
 
 LayoutHeader.propTypes = {

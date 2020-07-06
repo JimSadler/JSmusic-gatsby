@@ -236,11 +236,11 @@ body {
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-  position: fixed;
+  position: relative !important;
   width: 36px;
   height: 30px;
   left: 36px;
-  top: 19px;
+  top: 45px;
   display: block;
 }
 
@@ -279,16 +279,26 @@ body.light-mode nav a {
 .bm-item-list {
   color: #b8b7ad;
 }
-
+.bm-menu-wrap {
+  top: 0px;
+}
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+  height: 104% !important;
 }
 header ul {
   display: none;
 }
 header div[class^="LayoutHeader__Logo"] {
   padding-top: 1rem;
+  font-size: 30px;
+}
+header div[class^="LayoutHeader__Logo"] a {
+  font-size: 30px;
+}
+div#sideNav {
+  margin-top: -30px;
 }
 @media (min-width: 1064px) {
   .bm-burger-button {
@@ -296,5 +306,12 @@ header div[class^="LayoutHeader__Logo"] {
   }
   header ul {
     display: block;
+  }
+  div#sideNav {
+    margin-top: 0px;
+  }
+  header div[class^="LayoutHeader__Logo"] {
+    padding-top: 0rem;
+    font-size: 40px;
   }
 }

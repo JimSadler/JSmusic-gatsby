@@ -30,10 +30,7 @@ const Main = styled.main`
 `
 const Layout = ({ children }) => {
   return (
-    <PageFade>
-      <div id="sideNav">
-        <SideBar pageWrapId={"gatsby-focus-wrapper"} outerContainerId={"sideNav"} />
-      </div>
+    <PageFade id="page_wrapper">
       <Header />
       <Main> {children}</ Main>
       <Footer />
