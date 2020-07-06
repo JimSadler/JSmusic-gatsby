@@ -42,7 +42,7 @@ animation: 1s ${lightIn};
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
-    color: rgb(255 255 255);
+    color: rgb(223 223 223);
     font-size: 35px;
     
   }
@@ -64,15 +64,20 @@ animation: 1.5s ${fadeUp};
       text-decoration: underline;
     }
   }
-`
-
+// `
+// const LogoImg = styled.img`
+//   width: 10%;
+// `
 // const Branding = styled.div`
 //   margin: auto 0;
 // `
 const LayoutHeader = ({ siteTitle }) => (
   <Header>
+
+    {/* <LogoImg src="../src/images/Js_guitar_logoFinal_alt.png" alt="" /> */}
     <Logo>
-      <a href="/">Jim Sadler Music</a>
+
+      <a className="HeaderLogoText" href="/">Jim Sadler Music</a>
     </Logo >
     <NavUl className="navigation">
       <li>

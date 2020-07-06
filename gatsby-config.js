@@ -13,6 +13,8 @@ module.exports = {
     '@fortawesome/fontawesome-svg-core',
     '@fortawesome/free-brands-svg-icons',
     'react-iframe',
+    'react-burger-menu',
+
 
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,

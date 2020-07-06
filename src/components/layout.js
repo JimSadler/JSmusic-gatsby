@@ -13,6 +13,8 @@ import './global.css';
 import { fadeIn } from 'react-animations'
 import Footer from './Footer'
 import Header from './LayoutHeader'
+import SideBar from "./Sidebar";
+
 
 // animations
 const fadeInAnimation = keyframes`${fadeIn}`;
@@ -29,6 +31,9 @@ const Main = styled.main`
 const Layout = ({ children }) => {
   return (
     <PageFade>
+      <div id="sideNav">
+        <SideBar pageWrapId={"gatsby-focus-wrapper"} outerContainerId={"sideNav"} />
+      </div>
       <Header />
       <Main> {children}</ Main>
       <Footer />
