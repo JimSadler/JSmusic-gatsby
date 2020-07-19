@@ -101,6 +101,9 @@ const LayoutHeader = ({ siteTitle }) => (
           <Link to="/contact-us">Contact</Link>
         </li>
         <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li>
           <DarkModeToggle />
         </li>
       </NavUl>
