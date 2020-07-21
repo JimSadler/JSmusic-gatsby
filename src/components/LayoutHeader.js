@@ -98,7 +98,7 @@ const LayoutHeader = ({ siteTitle }) => (
           <Link to="/testimonials">Testimonials</Link>
         </li>
         <li>
-          <Link to="/contact-us">Contact</Link>
+          <Link to="/contact-us">Contacts</Link>
         </li>
         {/* <li>
           <Link to="/blog">Blog</Link>
